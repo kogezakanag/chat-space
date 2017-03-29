@@ -35,7 +35,7 @@ Please feel free to use a different markup language if you do not plan to run
 |name|text|none|
 |member_id|integer|add_index|
 
-belongs_to :user
+belongs_to :user  
 has_many :messages
 
 ## member
@@ -45,7 +45,7 @@ has_many :messages
 |group_id |integer|add_index|
 |user_id|integer|add_index|
 
-has_many :users
+has_many :users  
 has_many :groups
 
 ## user
@@ -55,7 +55,7 @@ has_many :groups
 |name|string|none|
 |email|text|none|
 
-belongs_to :member
+belongs_to :member  
 has_many :messages
 
 ## message
@@ -67,6 +67,6 @@ has_many :messages
 |group_id|integer|add_index
 |user_id|integer|add_index
 
-belongs_to :user
+belongs_to :user  
 belongs_to :group
 
