@@ -28,28 +28,34 @@ Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
 
 # database design
-## group-table
+## group
 
 |column|type|option|
 |:--|:--|:--|
 |name|text|none|
 |member_id|integer|add_index|
+belongs_to :user
+has_many :messages
 
-## member-table
+## member
 
 |column|type|option|
 |:--|:--|:--|
 |group_id |integer|add_index|
 |user_id|integer|add_index|
+has_many :users
+has_many :groups
 
-## user-table
+## user
 
 |column|type|option|
 |:--|:--|:--|
 |name|string|none|
 |email|text|none|
+belongs_to :member
+has_many :messages
 
-## message-table
+## message
 
 |column|type|option|
 |:--|:--|:--|
@@ -57,3 +63,6 @@ Please feel free to use a different markup language if you do not plan to run
 |image|string|none|
 |group_id|integer|add_index
 |user_id|integer|add_index
+belongs_to :user
+belongs_to :group
+
