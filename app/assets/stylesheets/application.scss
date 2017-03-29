@@ -1,9 +1,23 @@
 @import "./reset";
 
-.side-contents{
+header{
+  background-color: #2EADF3;
+  width: 100vw;
+  height: 30px;
+}
 
+.side-contents{
+  background-color: #2f3e51;
+  width: 260px;
+  height: 800px;
+  padding: 0 20px;
+  float: left;
 }
 
 .main-contents{
-  
+  background-color: #AAAAAA;
+  width : calc(100vw - 360px);
+  height: 800px;
+  padding: 0 20px;
+  float: left;
 }
