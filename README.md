@@ -32,13 +32,13 @@ Please feel free to use a different markup language if you do not plan to run
 
 |column|type|option|
 |:--|:--|:--|
-|name|text|none|
+|name|text|null: false|
 |member_id|integer|add_index|
 
 belongs_to :user  
 has_many :messages
 
-## member
+## groups_users
 
 |column|type|option|
 |:--|:--|:--|
@@ -52,8 +52,8 @@ has_many :groups
 
 |column|type|option|
 |:--|:--|:--|
-|name|string|none|
-|email|text|none|
+|name|string|null: false|
+|email|text|null: false  unique: true|
 
 belongs_to :member  
 has_many :messages
