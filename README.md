@@ -33,17 +33,17 @@ Please feel free to use a different markup language if you do not plan to run
 |column|type|option|
 |:--|:--|:--|
 |name|text|null: false|
-|member_id|integer|add_index|
+|member_id|integer|add_index <br> foreign_key: true|
 
-belongs_to :user  
+belongs_to :groups_users  
 has_many :messages
 
 ## groups_users
 
 |column|type|option|
 |:--|:--|:--|
-|group_id |integer|add_index|
-|user_id|integer|add_index|
+|group_id |integer|add_index <br> foreign_key: true|
+|user_id|integer|add_index <br> foreign_key: true|
 
 has_many :users  
 has_many :groups
@@ -53,9 +53,9 @@ has_many :groups
 |column|type|option|
 |:--|:--|:--|
 |name|string|null: false|
-|email|text|null: false  unique: true|
+|email|text|null: false <br> unique: true|
 
-belongs_to :member  
+belongs_to :groups_users  
 has_many :messages
 
 ## message
@@ -64,8 +64,8 @@ has_many :messages
 |:--|:--|:--|
 |body|text|none|
 |image|string|none|
-|group_id|integer|add_index
-|user_id|integer|add_index
+|group_id|integer|add_index <br> foreign_key: true|
+|user_id|integer|add_index <br> foreign_key: true|
 
 belongs_to :user  
 belongs_to :group
