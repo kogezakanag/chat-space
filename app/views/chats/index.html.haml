@@ -6,9 +6,9 @@
     .side-contents__user-content
       .side-contents__user-name
         勘太郎
-        = link_to "", method: :get, class: "side-contents__user--new-group" do
+        = link_to '', method: :get, class: 'side-contents__user--new-group' do
           %i.fa.fa-pencil-square-o
-        = link_to "", method: :get, class: "side-contents__user--edit-user" do
+        = link_to '', method: :get, class: 'side-contents__user--edit-user' do
           %i.fa.fa-cog
 
   .side-contents__groups
@@ -29,7 +29,7 @@
     .main-contents__header--group.clearfix
       .main-contents__header--group-name
         sample-group
-      =link_to "Edit", "", method: :get, class: "main-contents__header--group-edit-btn"
+      =link_to 'Edit', '', method: :get, class: 'main-contents__header--group-edit-btn'
     .main-contents__header--members
       MEMBER: 勘太郎、bdm
 
@@ -53,8 +53,8 @@
   .main-contents__footer
     %form.main-contents__footer-form 
       .main-contents__footer-body
-        %input.message{placeholder: "type a message"}
-        %label.chat-file{for: "message_image"}
-          %input#message_image.image{name: "message[image]", type: "file"}
+        %input.message{placeholder: 'type a message'}
+        %label.chat-file{for: 'message_image'}
+          %input#message_image.image{name: 'message[image]', type: 'file'}
           %i.fa.fa-image
-      %input.submit{type: "submit", name: "commit", value: "send"}
+      %input.submit{type: 'submit', name: 'commit', value: 'send'}
