@@ -1,7 +1,5 @@
 @import "./reset";
 
-*= require font-awesome
-
 header{
   background-color: #2EADF3;
   width: 100vw;
@@ -12,9 +10,6 @@ header{
 
 .side-contents{
   background-color: #2f3e51;
-  width: 260px;
-  height: 800px;
-  padding: 0 20px;
   width: 300px;
   height: 100vh;
   float: left;
@@ -74,10 +69,6 @@ header{
 }
 
 .main-contents{
-  background-color: #AAAAAA;
-  width : calc(100vw - 360px);
-  height: 800px;
-  padding: 0 20px;
   background-color: white;
   width : calc(100vw - 440px);
   height: 100vh;
