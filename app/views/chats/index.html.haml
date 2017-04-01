@@ -1,0 +1,62 @@
+%body
+
+%header<
+  チャットグループが作成されました。
+
+.side-contents
+  .side-contents__user
+    .side-contents__user-content
+      .side-contents__user-name
+        勘太郎
+        = link_to '', method: :get, class: 'side-contents__user--new-group' do
+          %i.fa.fa-pencil-square-o
+        = link_to '', method: :get, class: 'side-contents__user--edit-user' do
+          %i.fa.fa-cog
+
+  .side-contents__groups
+    .side-contents__groups-list
+      .side-contents__group
+        .side-contents__group-name
+          sample-group
+        .side-contents__group-message
+          こんにちわ
+      .side-contents__group
+        .side-contents__group-name
+          サンプル
+        .side-contents__group-message
+          こんばんわ
+
+.main-contents
+  .main-contents__header
+    .main-contents__header--group.clearfix
+      .main-contents__header--group-name
+        sample-group
+      =link_to 'Edit', '', method: :get, class: 'main-contents__header--group-edit-btn'
+    .main-contents__header--members
+      MEMBER: 勘太郎、bdm
+
+  .main-contents__body
+    .main-contents__body--massage-list
+      .main-contents__message
+        .main-contents__message-name
+          勘太郎
+        .main-contents__message-time
+          2017-04-14 20:03
+        .main-contents__message-body
+          3時に休憩
+      .main-contents__message
+        .main-contents__message-name
+          bdm
+        .main-contents__message-time
+          2017-04-14 20:05
+        .main-contents__message-body
+          ありよりのあり
+
+  .main-contents__footer
+    %form.main-contents__footer-form 
+      .main-contents__footer-body
+        %input.message{placeholder: 'type a message'}
+        %label.chat-file{for: 'message_image'}
+          %input#message_image.image{name: 'message[image]', type: 'file'}
+          %i.fa.fa-image
+      %input.submit{type: 'submit', name: 'commit', value: 'send'}
