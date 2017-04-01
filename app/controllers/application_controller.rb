@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
   def configure_devise_parameter_sanitizer
     devise_parameter_sanitizer.permit(:sign_up, keys:[:name])
   end
+
+  def after_sign_out_path_for(resource)
+    '/'
+  end
 end
