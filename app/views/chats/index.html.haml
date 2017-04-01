@@ -1,58 +1,58 @@
 %header<
   チャットグループが作成されました。
 
-%div.side-contents
-  %div.side-contents__user
-    %div.side-contents__user-content
-      %div.side-contents__user-name
+.side-contents
+  .side-contents__user
+    .side-contents__user-content
+      .side-contents__user-name
         勘太郎
         = link_to "", method: :get, class: "side-contents__user--new-group" do
           %i.fa.fa-pencil-square-o
         = link_to "", method: :get, class: "side-contents__user--edit-user" do
           %i.fa.fa-cog
 
-  %div.side-contents__groups
-    %div.side-contents__groups-list
-      %div.side-contents__group
-        %div.side-contents__group-name
+  .side-contents__groups
+    .side-contents__groups-list
+      .side-contents__group
+        .side-contents__group-name
           sample-group
-        %div.side-contents__group-message
+        .side-contents__group-message
           こんにちわ
-      %div.side-contents__group
-        %div.side-contents__group-name
+      .side-contents__group
+        .side-contents__group-name
           サンプル
-        %div.side-contents__group-message
+        .side-contents__group-message
           こんばんわ
 
-%div.main-contents
-  %div.main-contents__header
-    %div.main-contents__header--group.clearfix
-      %div.main-contents__header--group-name
+.main-contents
+  .main-contents__header
+    .main-contents__header--group.clearfix
+      .main-contents__header--group-name
         sample-group
       =link_to "Edit", "", method: :get, class: "main-contents__header--group-edit-btn"
-    %div.main-contents__header--members
+    .main-contents__header--members
       MEMBER: 勘太郎、bdm
 
-  %div.main-contents__body
-    %div.main-contents__body--massage-list
-      %div.main-contents__message
-        %div.main-contents__message-name
+  .main-contents__body
+    .main-contents__body--massage-list
+      .main-contents__message
+        .main-contents__message-name
           勘太郎
-        %div.main-contents__message-time
+        .main-contents__message-time
           2017-04-14 20:03
-        %div.main-contents__message-body
+        .main-contents__message-body
           惨事に求刑
-      %div.main-contents__message
-        %div.main-contents__message-name
+      .main-contents__message
+        .main-contents__message-name
           bdm
-        %div.main-contents__message-time
+        .main-contents__message-time
           2017-04-14 20:05
-        %div.main-contents__message-body
+        .main-contents__message-body
           ありよりのあり
 
-  %div.main-contents__footer
+  .main-contents__footer
     %form.main-contents__footer-form 
-      %div.main-contents__footer-body
+      .main-contents__footer-body
         %input.message{placeholder: "type a message"}
         %label.chat-file{for: "message_image"}
           %input#message_image.image{name: "message[image]", type: "file"}
