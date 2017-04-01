@@ -18,6 +18,47 @@ header{
   width: 300px;
   height: 100vh;
   float: left;
+  &__user {
+    height: 15%;
+    width: 100%;
+    background-color: #090c10;
+    position: relative;
+  }
+  &__user-content {
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    margin: auto 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  &__user-name {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 20px;
+    position: relative;
+    display: inline-block;
+  }
+  &__groups {
+    padding: 0px 20px;
+  }
+  &__groups-list {
+
+  }
+  &__group {
+    padding: 20px 0px;
+  }
+  &__group-name {
+    font-size: 15px;
+    color: white;
+  }
+  &__group-message {
+    font-size: 11px;
+    color: white;
+  }
+
 }
 
 .main-contents{
@@ -29,4 +70,55 @@ header{
   width : calc(100vw - 440px);
   height: 100vh;
   float: left;
+  &__header {
+    border:1px solid #eeeeee;
+  }
+  &__body {
+    height: calc( 100vh - 15% - 90px );
+    border:1px solid #eeeeee;
+  }
+  &__body--massage-list {
+
+  }
+  &__message{
+    padding: 40px 40px 0;
+  }
+  &__message-name {
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+  }
+  &__message-time {
+    color: #999999;
+    font-size: 12px;
+    float: left;
+    padding:0 10px;
+  }
+  &__message-body {
+    padding: 10px 0 ;
+    clear:both;
+  }
+
+  &__footer {
+    background-color: #aaaaaa;
+  }
+  &__footer-form {
+    margin: 0 40px;
+    position: relative;
+  }
+  &__footer-body {
+  }
+  .submit {
+    color: white;
+    background-color: #38aef0;
+    height: 50px;
+    padding:0 20px;
+    line-height: 50px;
+    border: 0;
+    margin: 20px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
 }
