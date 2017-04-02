@@ -83,6 +83,7 @@ body {
     height: 100vh;
     float: left;
     &__header {
+      height: 15%;
       border:1px solid #eeeeee;
       &--group {
         margin: 0 40px;
@@ -113,7 +114,6 @@ body {
     }
     &__body {
       height: calc( 100vh - 15% - 90px );
-      border:1px solid #eeeeee;
     }
     &__body--massage-list {
 
@@ -139,6 +139,7 @@ body {
 
     &__footer {
       background-color: #aaaaaa;
+      height: 90px;
     }
     &__footer-form {
       margin: 0 40px;
