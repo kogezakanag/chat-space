@@ -8,9 +8,9 @@
     .side-contents__user-content
       .side-contents__user-name
         勘太郎
-        = link_to '', method: :get, class: 'side-contents__user--new-group' do
+        = link_to '', class: 'side-contents__user--new-group' do
           %i.fa.fa-pencil-square-o
-        = link_to '', method: :get, class: 'side-contents__user--edit-user' do
+        = link_to edit_user_registration_path, class: 'side-contents__user--edit-user' do
           %i.fa.fa-cog
 
   .side-contents__groups
@@ -31,7 +31,7 @@
     .main-contents__header--group.clearfix
       .main-contents__header--group-name
         sample-group
-      =link_to 'Edit', '', method: :get, class: 'main-contents__header--group-edit-btn'
+      =link_to 'Edit', '', class: 'main-contents__header--group-edit-btn'
     .main-contents__header--members
       MEMBER: 勘太郎、bdm
 
