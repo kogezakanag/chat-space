@@ -1,7 +1,8 @@
 %body
-
-%header<
-  チャットグループが作成されました。
+  - if notice
+    %p.alert.alert-notice= notice
+  - if alert
+    %p.alert.alert-error= alert
 
 .side-contents
   .side-contents__user
