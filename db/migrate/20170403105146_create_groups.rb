@@ -4,7 +4,7 @@ class CreateGroups < ActiveRecord::Migration[5.0]
       t.text :name, null: :false
       t.reference :member_id, foreign_key: true
       t.timestamps null: :false
-      t.index :member_id
     end
+    add_index :groups, :member_id
   end
 end
