@@ -6,7 +6,6 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-config.i18n.default_locale = :ja
 
 module ChatSpace
   class Application < Rails::Application
@@ -18,5 +17,7 @@ module ChatSpace
       g.helper     false
       g.test_framework false
     end
+    
+config.i18n.default_locale = :ja
   end
 end
