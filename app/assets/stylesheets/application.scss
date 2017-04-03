@@ -6,12 +6,18 @@
 body {
   height: 100%;
 
-  header{
-    background-color: #2EADF3;
+  .alert{
     width: 100vw;
     height: 30px;
     text-align: center;
     color: white;
+  }
+
+  .alert-notice {
+    background-color: #2EADF3;
+  }
+  .alert-error {
+    background-color: red;
   }
 
   .side-contents{
