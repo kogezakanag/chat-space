@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170404024228) do
+ActiveRecord::Schema.define(version: 20170404041356) do
 
   create_table "groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "name",       limit: 65535
@@ -18,15 +18,6 @@ ActiveRecord::Schema.define(version: 20170404024228) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["user_id"], name: "index_groups_on_user_id", using: :btree
-  end
-
-  create_table "groups_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "group_id"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["group_id"], name: "index_groups_users_on_group_id", using: :btree
-    t.index ["user_id"], name: "index_groups_users_on_user_id", using: :btree
   end
 
   create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -59,8 +50,6 @@ ActiveRecord::Schema.define(version: 20170404024228) do
   end
 
   add_foreign_key "groups", "users"
-  add_foreign_key "groups_users", "groups"
-  add_foreign_key "groups_users", "users"
   add_foreign_key "messages", "groups"
   add_foreign_key "messages", "users"
 end
